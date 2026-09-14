@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undangan Syukuran Rumah Baru</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="syukuran">
+      <h1>UNDANGAN SYUKURAN RUMAH BARU</h1>
+      <h2>Doa Bersama & Silaturahmi</h2>
+
+      <nav>
+        <ul>
+          <li><a href="#lokasi">Lokasi</a></li>
+          <li><a href="#jadwal">Jadwal</a></li>
+          <li><a href="#rsvp">RSVP</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="tentang" class="konten">
+        <div id="content">
+          <aside>
+            <img class="gambar1" src="images.jpg" alt="Rumah Baru" />
+          </aside>
+        </div>
+
+        <div class="deskripsi-acara">
+          <p><em>Assalamu’alaikum Warahmatullahi Wabarakatuh.</em></p>
+          <p>
+            Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang
+            Bapak/Ibu/Saudara/i untuk hadir dalam acara
+            <strong>Syukuran & Doa Bersama</strong> atas selesainya pembangunan
+            rumah baru kami.
+          </p>
+          <p>
+            Kehadiran serta doa restu dari Bapak/Ibu/Saudara/i merupakan suatu
+            kehormatan dan kebahagiaan yang sangat berarti bagi keluarga kami.
+          </p>
+        </div>
+      </section>
+
+      <section id="lokasi" class="lokasi-acara">
+        <h3>Waktu & Lokasi Acara</h3>
+        <div class="detail-lokasi">
+          <p><strong>Hari / Tanggal:</strong> Sabtu, 20 September 2026</p>
+          <p><strong>Waktu:</strong> 18.30 WIB – Selesai</p>
+          <p>
+            <strong>Alamat:</strong>
+            <a
+              href="https://www.google.com/maps/place/Bermuda/@32.3191917,-64.9312071,11z/data=!3m1!4b1!4m6!3m5!1s0x8a2d139e8668b0a5:0x3cdffdc72c99b8bc!8m2!3d32.3078!4d-64.7505!16zL20vMDE2NWI?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              >Bermuda, Kepulauan Bermuda</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <section id="jadwal" class="jadwal-acara">
+        <h3>Susunan Rangkaian Acara</h3>
+        <table class="tabel-jadwal">
+          <thead>
+            <tr>
+              <th>Waktu</th>
+              <th>Kegiatan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="teks-tengah">18:30 - 19:15</td>
+              <td>Shalat Maghrib Berjamaah</td>
+            </tr>
+            <tr>
+              <td class="teks-tengah">19:15 - 20:15</td>
+              <td>Pembacaan Surat Yasin & Doa Bersama</td>
+            </tr>
+            <tr>
+              <td class="teks-tengah">20:15 - 21:00</td>
+              <td>Sambutan Tuan Rumah & Ramah Tamah</td>
+            </tr>
+            <tr>
+              <td class="teks-tengah">21:00 - Selesai</td>
+              <td>Makan Malam Bersama & Santai</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="rsvp" class="rsvp-form">
+        <h3>Konfirmasi Kehadiran (RSVP)</h3>
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label for="nama">Nama Lengkap:</label>
+            <input
+              type="text"
+              id="nama"
+              name="nama"
+              placeholder="Masukkan nama Anda..."
+              required />
+          </div>
+
+          <div class="form-group">
+            <label for="status">Status Kehadiran:</label>
+            <select id="status" name="status" required>
+              <option value="">-- Pilih Kehadiran --</option>
+              <option value="Hadir">Bisa Hadir</option>
+              <option value="Ragu">Masih Ragu</option>
+              <option value="Tidak Hadir">Maaf, Belum Bisa Hadir</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="jumlah">Jumlah Tamu yang Hadir:</label>
+            <input
+              type="number"
+              id="jumlah"
+              name="jumlah"
+              min="1"
+              max="5"
+              value="1" />
+          </div>
+
+          <div class="form-group">
+            <label for="pesan">Pesan / Doa Ucapan:</label>
+            <textarea
+              id="pesan"
+              name="pesan"
+              rows="3"
+              placeholder="Tuliskan doa ucapan Anda..."></textarea>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit">Kirim Konfirmasi</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
