@@ -5,13 +5,4 @@
 3. Claudya Chantika Tampubolon (25071103630)
 4. Nadya Sulfa Ul-Zannah (25071101291)
 
-Time to Laprak
-
-okk
-ok
-
-halorekk
-okk
-yey cihuy
-
-Info Gacoan
+=== KAMI ANAK BAIK ===
