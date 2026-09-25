@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undangan Ulang Tahun</title>
+    <link rel="stylesheet" href="stylesJK.css" />
+
+</head>
+<body>
+    <header>
+        <br>
+        <h1 class="tempel">New age, new energy!</h1>
+        <h1>Birthday Party Jeon Jungkook</h1>
+        <p>
+            "Di setiap nada lagu dan setiap senyum yang ia berikan, 
+            ia selalu meninggalkan jejak hangat di hati kita. 
+            Hari ini, yang kita rayakan bukan hanya ulang tahunnya, 
+            tapi juga semua kebahagiaan yang ia bawa dalam hidup kita."
+        </p>
+        <nav>
+            <ul>
+                <li><a href="#info">Info</a></li>
+                <li><a href="#acara">Susunan Acara</a></li>
+                <li><a href="#jadwal">Party Time</a></li>
+                <li><a href="#rsvp">Konfirmasi RSVP</a></li>
+            </ul>
+            <br>
+        </nav>
+    </header>
+
+    <main>
+
+                <aside id="info">
+            <figure>
+                <img
+                src="jk.png"
+                alt="Foto Jeon Jungkook"
+                width="400"
+                />
+                <figcaption>Jeon Jungkook</figcaption>
+            </figure>
+            <p class="tes-border">
+                Selamat hari lahir, Jungkook. 
+                Apresiasi terbesar atas segala karya indah dan energi positif yang selalu kamu bagikan kepada Army. 
+                Semoga kamu selalu dikelilingi oleh kedamaian, cinta, dan hal-hal baik setiap harinya.
+            </p>
+        </aside>
+    </div>
+
+        <div class="kiri">
+        <section id="acara">
+            <h2>Susunan Acara</h2>
+            <ol type="1">
+                <li><strong>Pembukaan : </strong>20.00 - 20.30 WIB</li>
+                <li>
+                    <strong>Potong Kue : </strong>20.30 - 21.30 WIB
+                </li>
+                <li><strong>Party Time : </strong>21.30 - 22.30 WIB</li>
+            </ol>
+
+            <p>
+                <strong>Lokasi Acara : </strong>Hybe Headquarters <br/>
+                <a href="https://maps.app.goo.gl/n8ybghdnPGbFXQU99" target="_blank">
+                    >>> Buka Petunjuk Lokasi di Google Maps
+                </a>
+            </p>
+        </section>
+
+        <section id="jadwal">
+            <h2>Jadwal Party</h2>
+            <table border="1">
+          <thead>
+            <tr>
+              <th>Party</th>
+              <th>Waktu (WIB)</th>
+              <th>Rombongan Tamu</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Party 1</td>
+              <td>20.00 - 20.30</td>
+              <td>Penggemar / Fans dan Pimpinan </td>
+            </tr>
+            <tr>
+              <td>party 2</td>
+              <td>20.30 - 21.30</td>
+              <td>Para Kru dan Rekan Kerja</td>
+            </tr>
+            <tr>
+              <td>Party Party Yeahh</td>
+              <td>21.30 - 22.30</td>
+              <td>Sahabat</td>
+            </tr>
+          </tbody>
+        </table>
+        </section>
+
+        <section id="rsvp">
+            <h3>Konfirmasi Kehadiran (RSVP)</h3>
+            <form action="/kirim-konfirmasi" method="POST">
+                <div>
+                    <label for="namaTamu">Nama Lengkap Tamu : </label><br />
+                    <input
+                        type="text"
+                        id="namaTamu"
+                        name="nama_tamu"
+                        placeholder="contoh: Kim Seok Jin"
+                        required
+                        />
+                </div>
+                <div>
+                    <label>Konfirmasi Kehadiran:</label><br />
+                    <input
+                    type="radio"
+                    id="hadir"
+                    name="status_kehadiran"
+                    value="hadir"
+                    checked
+                    />
+                    <label for="hadir">Pasti Hadir</label>
+
+                    <input
+                    type="radio"
+                    id="ragu"
+                    name="status_kehadiran"
+                    value="ragu"
+                    />
+                    <label for="ragu">Ragu - Ragu</label>
+
+                    <input
+                    type="radio"
+                    id="tidak"
+                    name="status_kehadiran"
+                    value="tidak"
+                    />
+                    <label for="tidak">Tidak Bisa Hadir</label>
+                </div>
+                <br />
+
+                <div>
+                    <label for="jumlahOrang">Jumlah Tamu yang Hadir:</label><br />
+                    <input
+                    type="number"
+                    id="jumlahOrang"
+                    name="jumlah_orang"
+                    min="1"
+                    max="3"
+                    value="1"
+                    />
+                </div>
+                <br />
+
+                <div>
+                    <label for="pesanDoa">Ucapan &amp; Doa Harapan:</label><br />
+                    <textarea
+                    id="pesanDoa"
+                    name="pesan_doa"
+                    rows="4"
+                    cols="40"
+                    placeholder="Tuliskan ucapan selamat dan doa harapan di sini..."
+                    ></textarea>
+                </div>
+                <br />
+
+                <input type="submit" value="Kirim Konfirmasi Kehadiran" />
+            </form>
+        </section>
+        </div>
+
+        <div class="kanan">
+
+            <aside id="dresscode">
+            <h4>Dresscode</h4>
+            <p>
+                Tamu undangan disarankan menggunakan drasscode bernuansa
+                <mark>Gaun / Berjas</mark>
+            </p>
+        </aside>
+        </div>
+
+    </main>
+
+    <footer>
+        <br>
+        <p>
+            Sebuah kehormatan bagi kami atas kehadiran, ucapan, dan doa tulus Anda untuk Jungkook.
+        </p>
+        <p>
+            Kami yang berbahagia
+            <br>
+            <b>Keluarga Besar Bangtan Sonyeondan - ARMY</b>
+        </p>
+        <small
+            >&copy; 2026 Birthday Party Jeon Jungkook. All rights
+        reserved.</small
+        >
+        </p>
+        <br>
+    </footer>
+    
+</body>
+</html>>
