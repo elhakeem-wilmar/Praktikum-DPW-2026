@@ -1,0 +1,964 @@
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Cormorant Garamond", serif;
+    background: #dceefa;
+    color: #ffffff;
+}
+
+
+/* ==================================================
+   HALAMAN PEMBUKA
+================================================== */
+
+.cover {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+
+    background-image: url("assets/cover.jpg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* Lapisan gelap */
+
+.cover-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(20, 70, 95, 0.05),
+            rgba(5, 25, 45, 0.85)
+        );
+}
+
+
+/* Isi cover */
+
+.cover-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 600px;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Foto cover */
+
+.cover-photo {
+    width: 65%;
+    max-width: 390px;
+
+    position: absolute;
+    top: 29%;
+}
+
+.cover-photo img {
+    width: 100%;
+    display: block;
+}
+
+
+/* Nama */
+
+.cover-name {
+    position: absolute;
+
+    width: 80%;
+
+    top: 45%;
+
+    font-size: clamp(70px, 12vw, 120px);
+    line-height: 0.75;
+
+    color: #f8d9ca;
+
+    text-shadow:
+        2px 2px 0 rgba(0, 0, 0, 0.15),
+        0 5px 15px rgba(0, 0, 0, 0.3);
+
+    font-weight: 600;
+}
+
+.cover-name span {
+    display: block;
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 0.65em;
+
+    text-align: center;
+
+    margin: 15px 0;
+}
+
+
+/* Tombol */
+
+.open-button,
+.calendar-button {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    background: rgba(80, 110, 125, 0.55);
+
+    color: #f9ded0;
+
+    border-radius: 40px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.open-button {
+    position: absolute;
+
+    bottom: 11%;
+
+    width: 280px;
+
+    padding: 13px 20px;
+}
+
+.open-button:hover,
+.calendar-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+
+    transform: scale(1.03);
+}
+
+
+/* ==================================================
+   MAIN
+================================================== */
+
+.main-website {
+    display: none;
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+    position: relative;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    background: #075268;
+}
+
+.hero-background {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(0, 60, 78, 0.25),
+            rgba(0, 30, 45, 0.45)
+        ),
+        url("assets/cover.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    filter: saturate(0.8);
+}
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1000px;
+
+    min-height: 100vh;
+
+    margin: auto;
+}
+
+
+/* ==================================================
+   TANGGAL HERO
+================================================== */
+
+.date {
+    position: absolute;
+
+    top: 5%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 20px;
+
+    font-size: 35px;
+
+    color: #f5eee9;
+}
+
+.date span:not(:last-child)::after {
+    content: "-";
+
+    margin-left: 20px;
+}
+
+
+/* ==================================================
+   FOTO
+================================================== */
+
+.photo {
+    position: absolute;
+
+    overflow: hidden;
+
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* Foto Claud */
+
+.photo-claud {
+    width: 310px;
+    height: 600px;
+
+    left: 18%;
+    top: 11%;
+
+    border-radius: 160px 160px 50px 50px;
+}
+
+
+/* Foto Hadi */
+
+.photo-hadi {
+    width: 280px;
+    height: 390px;
+
+    left: 45%;
+    top: 38%;
+
+    border-radius: 150px 150px 40px 40px;
+}
+
+
+/* ==================================================
+   NAMA HERO
+================================================== */
+
+.hero-name {
+    position: absolute;
+
+    left: 22%;
+    top: 39%;
+
+    z-index: 5;
+
+    font-size: clamp(60px, 9vw, 110px);
+
+    color: #f6d4c5;
+
+    line-height: 0.75;
+
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+}
+
+.hero-name span {
+    display: block;
+}
+
+.hero-name small {
+    display: block;
+
+    text-align: center;
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 60px;
+
+    margin: 15px 0;
+}
+
+
+/* ==================================================
+   LOKASI
+================================================== */
+
+.location {
+    position: absolute;
+
+    top: 10%;
+    right: 15%;
+
+    width: 150px;
+
+    text-align: center;
+
+    color: #f5eee9;
+}
+
+.location-icon {
+    font-size: 40px;
+}
+
+.location-line {
+    width: 100px;
+
+    height: 70px;
+
+    border-top: 3px solid white;
+
+    border-radius: 50%;
+
+    margin: -5px auto 0;
+
+    transform: rotate(10deg);
+}
+
+.location p {
+    font-family: "Great Vibes", cursive;
+
+    font-size: 30px;
+}
+
+
+/* ==================================================
+   BUTTON KALENDER
+================================================== */
+
+.calendar-button {
+    padding: 12px 28px;
+
+    min-width: 230px;
+}
+
+.calendar-button span {
+    margin-right: 8px;
+}
+
+
+/* ==================================================
+   WEDDING SECTION
+================================================== */
+
+.wedding-section {
+    position: relative;
+
+    min-height: 600px;
+
+    overflow: hidden;
+
+    background: #b7dff4;
+}
+
+.wedding-background {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(170, 220, 245, 0.55),
+            rgba(160, 215, 240, 0.7)
+        ),
+        url("assets/cover.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    opacity: 0.8;
+}
+
+.wedding-content {
+    position: relative;
+
+    z-index: 2;
+
+    min-height: 600px;
+
+    max-width: 1400px;
+
+    margin: auto;
+}
+
+
+/* ==================================================
+   TANGGAL WEDDING
+================================================== */
+
+.wedding-date {
+    position: absolute;
+
+    left: 7%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+
+    font-size: 70px;
+
+    line-height: 0.9;
+
+    color: white;
+
+    text-shadow: 2px 2px 5px #7aa5ba;
+}
+
+
+/* ==================================================
+   FOTO PASANGAN
+================================================== */
+
+.couple-wrapper {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 500px;
+    height: 450px;
+}
+
+.couple-photo {
+    position: absolute;
+
+    width: 210px;
+    height: 300px;
+
+    overflow: hidden;
+
+    border: 5px solid white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.couple-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.couple-left {
+    left: 25px;
+    top: 20px;
+}
+
+.couple-right {
+    right: 25px;
+    top: 70px;
+}
+
+.couple-name {
+    position: absolute;
+
+    left: 50%;
+    top: 55%;
+
+    transform: translate(-50%, -50%);
+
+    width: 600px;
+
+    text-align: center;
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 70px;
+
+    color: white;
+
+    text-shadow: 2px 3px 5px rgba(50, 70, 80, 0.5);
+}
+
+
+/* ==================================================
+   LOKASI WEDDING
+================================================== */
+
+.wedding-location {
+    position: absolute;
+
+    right: 7%;
+    top: 42%;
+
+    text-align: center;
+
+    color: white;
+}
+
+.map-icon {
+    font-size: 40px;
+}
+
+.dotted-line {
+    width: 80px;
+    height: 50px;
+
+    border: 2px dashed white;
+
+    border-radius: 50%;
+
+    margin: -5px auto;
+}
+
+.wedding-location h3 {
+    font-size: 25px;
+
+    font-weight: 500;
+}
+
+.wedding-location p {
+    font-size: 22px;
+}
+
+
+/* Tombol bawah */
+
+.bottom-calendar {
+    position: absolute;
+
+    bottom: 8%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: white;
+
+    color: #54798a;
+
+    border: none;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.bottom-calendar:hover {
+    background: #f5f5f5;
+
+    transform: translateX(-50%) scale(1.03);
+}
+
+
+/* ==================================================
+   COUNTDOWN
+================================================== */
+
+.countdown-section {
+    min-height: 400px;
+
+    padding: 80px 20px;
+
+    background: #e8f5fb;
+
+    color: #557b8c;
+
+    text-align: center;
+}
+
+.countdown-section h2 {
+    font-family: "Great Vibes", cursive;
+
+    font-size: 55px;
+
+    margin-bottom: 40px;
+}
+
+.countdown {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.count-box {
+    width: 120px;
+
+    padding: 25px 10px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px rgba(50, 90, 110, 0.15);
+}
+
+.count-box span {
+    display: block;
+
+    font-size: 45px;
+}
+
+.count-box small {
+    font-size: 18px;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+    padding: 40px;
+
+    text-align: center;
+
+    background: #4c7180;
+
+    color: white;
+}
+
+footer p {
+    font-family: "Great Vibes", cursive;
+
+    font-size: 40px;
+}
+
+footer span {
+    font-size: 18px;
+}
+
+
+/* ==================================================
+   MUSIC BUTTON
+================================================== */
+
+.music-button {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    z-index: 100;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #557e91;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+
+    display: none;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    .photo-claud {
+        left: 8%;
+    }
+
+    .photo-hadi {
+        left: 42%;
+    }
+
+    .hero-name {
+        left: 12%;
+    }
+
+    .location {
+        right: 5%;
+    }
+
+    .wedding-date {
+        left: 3%;
+    }
+
+    .wedding-location {
+        right: 3%;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    .cover-content {
+        max-width: 500px;
+    }
+
+    .cover-photo {
+        width: 85%;
+
+        top: 28%;
+    }
+
+    .cover-name {
+        top: 44%;
+
+        font-size: 75px;
+    }
+
+    .open-button {
+        bottom: 10%;
+
+        width: 260px;
+
+        font-size: 18px;
+    }
+
+
+    /* HERO MOBILE */
+
+    .hero {
+        min-height: 100vh;
+    }
+
+    .date {
+        top: 3%;
+
+        font-size: 28px;
+
+        gap: 10px;
+    }
+
+    .date span:not(:last-child)::after {
+        margin-left: 10px;
+    }
+
+
+    .photo-claud {
+        width: 62vw;
+        height: 110vw;
+
+        max-height: 560px;
+
+        left: 9%;
+
+        top: 12%;
+    }
+
+    .photo-hadi {
+        width: 55vw;
+        height: 75vw;
+
+        max-height: 400px;
+
+        left: 39%;
+
+        top: 38%;
+    }
+
+
+    .hero-name {
+        left: 12%;
+
+        top: 40%;
+
+        font-size: 75px;
+    }
+
+    .hero-name small {
+        font-size: 45px;
+
+        margin: 10px 0;
+    }
+
+
+    .location {
+        top: 8%;
+
+        right: 4%;
+
+        width: 100px;
+    }
+
+    .location-icon {
+        font-size: 30px;
+    }
+
+    .location-line {
+        width: 70px;
+
+        height: 40px;
+    }
+
+    .location p {
+        font-size: 25px;
+    }
+
+
+    .calendar-button {
+        font-size: 18px;
+
+        min-width: 220px;
+    }
+
+
+    /* WEDDING MOBILE */
+
+    .wedding-section {
+        min-height: 650px;
+    }
+
+    .wedding-content {
+        min-height: 650px;
+    }
+
+    .wedding-date {
+        left: 8%;
+
+        top: 30%;
+
+        font-size: 48px;
+    }
+
+
+    .couple-wrapper {
+        width: 90vw;
+
+        height: 400px;
+
+        top: 48%;
+    }
+
+    .couple-photo {
+        width: 42vw;
+
+        height: 58vw;
+
+        max-height: 300px;
+    }
+
+    .couple-left {
+        left: 2%;
+
+        top: 20px;
+    }
+
+    .couple-right {
+        right: 2%;
+
+        top: 70px;
+    }
+
+    .couple-name {
+        width: 100%;
+
+        top: 55%;
+
+        font-size: 45px;
+    }
+
+
+    .wedding-location {
+        right: 8%;
+
+        top: 15%;
+    }
+
+    .wedding-location h3 {
+        font-size: 18px;
+    }
+
+    .wedding-location p {
+        font-size: 17px;
+    }
+
+    .bottom-calendar {
+        bottom: 6%;
+    }
+
+
+    /* COUNTDOWN */
+
+    .countdown-section {
+        padding: 60px 15px;
+    }
+
+    .countdown-section h2 {
+        font-size: 42px;
+    }
+
+    .count-box {
+        width: 75px;
+
+        padding: 15px 5px;
+    }
+
+    .count-box span {
+        font-size: 30px;
+    }
+
+    .count-box small {
+        font-size: 14px;
+    }
+
+}
