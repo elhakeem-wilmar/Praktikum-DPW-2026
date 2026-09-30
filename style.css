@@ -148,14 +148,6 @@ body:not(.invitation-open) .page:not(#page1) {
     transform: translateX(-40%); 
 }
 
-.bot-ornament {
-    width: 20%;
-    height: 10%;
-    top: 900px;
-    text-align: center;
-    transform: translateX(-50%);
-}
-
 .top-ornament {
     width: 20%;
     height: 10%;
