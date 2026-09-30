@@ -886,6 +886,9 @@ body:not(.invitation-open) .page:not(#page1) {
     width: 100%;
 }
 
+.wish-page{
+    background-image: url(assets/bg3.jpeg);
+}
 
 .wish-container {
     position: relative;
@@ -895,14 +898,15 @@ body:not(.invitation-open) .page:not(#page1) {
     display: flex;
     gap: 60px;
     align-items: center;
+    
 }
 
 
 .wish-name {
     color: var(--orange);
     font-family: "Great Vibes", cursive;
-    font-size: 75px;
-    line-height: .7;
+    font-size: 105px;
+    line-height: .9;
     width: 35%;
 }
 
