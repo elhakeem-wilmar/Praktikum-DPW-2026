@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Admin - Fazl & Nadya Wedding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <!-- ================= HALAMAN LOGIN ================= -->
+    <div id="loginView" class="login-container">
+      <div class="login-card">
+        <h2>ADMIN LOGIN</h2>
+        <p>Kelola Data Undangan Pernikahan</p>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              placeholder="Masukkan username"
+              required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Masukkan password"
+              required />
+          </div>
+          <button type="submit" class="btn-primary">MASUK</button>
+          <div id="loginError" class="error-msg">
+            Username atau Password salah!
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- ================= DASHBOARD UTAMA ================= -->
+    <div id="dashboardView" class="dashboard-container" style="display: none">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <h2>Fazl & Nadya</h2>
+          <small>Wedding Admin Panel</small>
+        </div>
+        <nav class="sidebar-menu">
+          <button class="nav-btn active" onclick="switchTab('pengantin')">
+            📌 Pengantin & Utama
+          </button>
+          <button class="nav-btn" onclick="switchTab('detail')">
+            👤 Detail Pasangan
+          </button>
+          <button class="nav-btn" onclick="switchTab('story')">
+            📖 Love Story
+          </button>
+          <button class="nav-btn" onclick="switchTab('lokasi')">
+            📍 Lokasi & Media
+          </button>
+          <button class="nav-btn" onclick="switchTab('ucapan')">
+            💌 Daftar Ucapan
+          </button>
+        </nav>
+        <button class="btn-logout" onclick="logout()">LOGOUT</button>
+      </aside>
+
+      <!-- CONTENT AREA -->
+      <main class="main-content">
+        <!-- HEADER -->
+        <header class="topbar">
+          <h1 id="pageTitle">Pengantin & Informasi Utama</h1>
+          <a href="index.html" target="_blank" class="btn-preview"
+            >🔗 Lihat Landing Page</a
+          >
+        </header>
+
+        <form id="adminDataForm">
+          <!-- TAB 1: PENGANTIN & UTAMA -->
+          <section id="tab-pengantin" class="tab-content active">
+            <div class="card">
+              <h3>Nama Pasangan Utama</h3>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>Nama Pria (Panggilan)</label>
+                  <input type="text" id="groomShort" name="groomShort" />
+                </div>
+                <div class="form-group">
+                  <label>Nama Wanita (Panggilan)</label>
+                  <input type="text" id="brideShort" name="brideShort" />
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>Waktu & Countdown Acara</h3>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>Tanggal (HH)</label>
+                  <input
+                    type="text"
+                    id="eventDay"
+                    name="eventDay"
+                    placeholder="12" />
+                </div>
+                <div class="form-group">
+                  <label>Bulan (BB)</label>
+                  <input
+                    type="text"
+                    id="eventMonth"
+                    name="eventMonth"
+                    placeholder="12" />
+                </div>
+                <div class="form-group">
+                  <label>Tahun (TTTT)</label>
+                  <input
+                    type="text"
+                    id="eventYear"
+                    name="eventYear"
+                    placeholder="2027" />
+                </div>
+                <div class="form-group">
+                  <label>Target Countdown (YYYY-MM-DD HH:MM:SS)</label>
+                  <input
+                    type="text"
+                    id="countdownTarget"
+                    name="countdownTarget"
+                    placeholder="2027-12-12 09:00:00" />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- TAB 2: DETAIL PASANGAN -->
+          <section id="tab-detail" class="tab-content">
+            <div class="card">
+              <h3>Detail Pengantin Pria (Groom)</h3>
+              <div class="form-group">
+                <label>Nama Lengkap & Gelar</label>
+                <input type="text" id="groomFull" name="groomFull" />
+              </div>
+              <div class="form-group">
+                <label>Tanggal Lahir</label>
+                <input type="text" id="groomBirth" name="groomBirth" />
+              </div>
+              <div class="form-group">
+                <label>Nama Orang Tua</label>
+                <input type="text" id="groomParents" name="groomParents" />
+              </div>
+              <div class="form-group">
+                <label>Kutipan / Quote</label>
+                <textarea id="groomQuote" name="groomQuote" rows="3"></textarea>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>Detail Pengantin Wanita (Bride)</h3>
+              <div class="form-group">
+                <label>Nama Lengkap & Gelar</label>
+                <input type="text" id="brideFull" name="brideFull" />
+              </div>
+              <div class="form-group">
+                <label>Tanggal Lahir</label>
+                <input type="text" id="brideBirth" name="brideBirth" />
+              </div>
+              <div class="form-group">
+                <label>Nama Orang Tua</label>
+                <input type="text" id="brideParents" name="brideParents" />
+              </div>
+              <div class="form-group">
+                <label>Kutipan / Quote</label>
+                <textarea id="brideQuote" name="brideQuote" rows="3"></textarea>
+              </div>
+            </div>
+          </section>
+
+          <!-- TAB 3: LOVE STORY -->
+          <section id="tab-story" class="tab-content">
+            <div class="card">
+              <h3>Story 1: Pertemuan Pertama</h3>
+              <div class="form-group">
+                <label>Judul & Tahun</label>
+                <input type="text" id="story1Title" name="story1Title" />
+              </div>
+              <div class="form-group">
+                <label>Deskripsi Singkat</label>
+                <textarea id="story1Text" name="story1Text" rows="2"></textarea>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>Story 2: Perjalanan</h3>
+              <div class="form-group">
+                <label>Judul & Tahun</label>
+                <input type="text" id="story2Title" name="story2Title" />
+              </div>
+              <div class="form-group">
+                <label>Deskripsi Singkat</label>
+                <textarea id="story2Text" name="story2Text" rows="2"></textarea>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>Story 3: Awal Selamanya</h3>
+              <div class="form-group">
+                <label>Judul & Tahun</label>
+                <input type="text" id="story3Title" name="story3Title" />
+              </div>
+              <div class="form-group">
+                <label>Deskripsi Singkat</label>
+                <textarea id="story3Text" name="story3Text" rows="2"></textarea>
+              </div>
+            </div>
+          </section>
+
+          <!-- TAB 4: LOKASI & MEDIA -->
+          <section id="tab-lokasi" class="tab-content">
+            <div class="card">
+              <h3>Lokasi Acara</h3>
+              <div class="form-group">
+                <label>Link Google Maps</label>
+                <input type="text" id="mapsUrl" name="mapsUrl" />
+              </div>
+              <div class="form-group">
+                <label>Teks Tombol Hadiah / Cashless</label>
+                <textarea
+                  id="cashlessText"
+                  name="cashlessText"
+                  rows="2"></textarea>
+              </div>
+            </div>
+          </section>
+
+          <!-- ACTION BUTTON -->
+          <div class="save-bar" id="saveBar">
+            <button type="submit" class="btn-save">💾 SIMPAN PERUBAHAN</button>
+          </div>
+        </form>
+
+        <!-- TAB 5: DAFTAR UCAPAN (GUESTBOOK) -->
+        <section id="tab-ucapan" class="tab-content">
+          <div class="card">
+            <div class="card-header-flex">
+              <h3>Pesan & Ucapan Tamu</h3>
+              <button class="btn-danger-sm" onclick="clearAllWishes()">
+                Hapus Semua Pesan
+              </button>
+            </div>
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Nama Tamu</th>
+                    <th>Pesan / Ucapan</th>
+                    <th>Aksi</th>
+                  </tr>
+                </thead>
+                <tbody id="wishesTableBody">
+                  <!-- Data ucapan diisi lewat JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="toast">Data berhasil disimpan!</div>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>
