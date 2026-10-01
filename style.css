@@ -107,7 +107,7 @@ body:not(.invitation-open) .page:not(#page1) {
 
 .open-btn {
   position: absolute;
-  bottom: 300px; /* Diturunkan mendekati bagian bawah layar */
+  bottom: 120px; /* Diturunkan mendekati bagian bawah layar */
   left: 50%;
   transform: translateX(-50%); /* Memastikan tombol presisi tepat di tengah */
   z-index: 3; /* Memastikan tombol selalu berada di atas ornamen */
@@ -133,13 +133,13 @@ body:not(.invitation-open) .page:not(#page1) {
   position: absolute;
   z-index: 3;
   color: var(--cream);
-  font-size: 40px;
+  font-size: 30px;
   letter-spacing: 15px;
 }
 
 .bottom-ornament {
   position: absolute;
-  bottom: 10px; /* Menempel di dasar/paling bawah layar */
+  bottom: 5px; /* Menempel di dasar/paling bawah layar */
   left: 50%;
   transform: translateX(-50%); /* Lurus pas di tengah secara horizontal */
   z-index: 2;
@@ -149,7 +149,7 @@ body:not(.invitation-open) .page:not(#page1) {
 }
 
 .bottom-ornament img {
-  width: 100%;
+  width: 70%;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -157,7 +157,7 @@ body:not(.invitation-open) .page:not(#page1) {
 
 .top-ornament {
   position: absolute;
-  top: 25px; /* Mengatur posisi naik lebih ke atas dari batas atas halaman */
+  top: 5px; /* Mengatur posisi naik lebih ke atas dari batas atas halaman */
   left: 50%; /* Memindahkan titik acuan ke tengah layar secara horizontal */
   transform: translateX(
     -50%
@@ -169,7 +169,7 @@ body:not(.invitation-open) .page:not(#page1) {
 }
 
 .top-ornament img {
-  width: 100%;
+  width: 70%;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -982,6 +982,8 @@ body:not(.invitation-open) .page:not(#page1) {
   width: 195%;
   max-width: 1400px;
   text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .movie-title {
@@ -1024,7 +1026,7 @@ body:not(.invitation-open) .page:not(#page1) {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-left: 350px;
+  margin-left: 30px;
 }
 
 /* 1. KARTU KACA TRANSPARAN (SISI KIRI) */
@@ -1154,10 +1156,10 @@ body:not(.invitation-open) .page:not(#page1) {
 /* 2. TULISAN NAMA PASANGAN (DIPERBESAR SANGAT SIGNIFIKAN) */
 .wish-couple-name {
   position: absolute;
-  top: 10%; /* Posisi sedikit lebih tinggi */
-  right: 20%; /* Lebih rapat ke kanan */
+  top: 7%; /* Posisi sedikit lebih tinggi */
+  right: 15%; /* Lebih rapat ke kanan */
   font-family: "Caveat", "Great Vibes", cursive;
-  font-size: 140px !important; /* Ukuran nama naik dari 90px ke 140px */
+  font-size: 100px !important; /* Ukuran nama naik dari 90px ke 140px */
   color: #ffffff !important;
   line-height: 0.82;
   text-align: left;
@@ -1197,7 +1199,7 @@ body:not(.invitation-open) .page:not(#page1) {
 
 .thank-left h1 {
   font-family: "Special Elite", cursive, sans-serif;
-  font-size: 65px;
+  font-size: 50px;
   letter-spacing: 3px;
   color: #728675 !important; /* Warna hijau sage / abu kehijauan sesuai mockup */
   margin-bottom: 8px;
@@ -1206,7 +1208,7 @@ body:not(.invitation-open) .page:not(#page1) {
 
 .thank-left p {
   font-family: "Special Elite", cursive, sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   letter-spacing: 1.5px;
   color: #728675 !important; /* Disamakan warnanya dengan judul */
   line-height: 1.5;
@@ -1219,7 +1221,7 @@ body:not(.invitation-open) .page:not(#page1) {
   top: 40%;
   right: 10%;
   font-family: "Caveat", "Great Vibes", cursive;
-  font-size: 200px;
+  font-size: 120px;
   color: #ffffff !important; /* Diubah dari oranye ke warna putih bersih */
   line-height: 0.85;
   text-align: left;
@@ -1268,7 +1270,7 @@ body:not(.invitation-open) .page:not(#page1) {
   }
 
   .open-btn {
-    bottom: 90px;
+    bottom: 70px;
     padding: 10px 25px;
     font-size: 14px;
     min-width: 160px;
