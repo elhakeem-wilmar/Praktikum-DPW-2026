@@ -36,10 +36,6 @@
     <div class="dark-overlay"></div>
     
     <div class="cover-content">
-        <div class="bottom-ornament">
-            <img src="assets/ornamen2.png" width="780">
-        </div>
-        
         <div class="cover-name">
             <span>Fazl &</span>
             <span>Nadya</span>
@@ -48,11 +44,11 @@
         <button class="open-btn" onclick="openInvitation()">
             OPEN INVITATION
         </button>
-        
+
+        <div class="bottom-ornament">
+            <img src="assets/ornamen2.png" alt="Ornamen">
+        </div>
     </div>
-
-    
-
 </section>
 
 
@@ -223,58 +219,51 @@
 
 
 <section class="page event-page" id="page6">
-    <div class="dark-overlay"></div>
-    <div class="event-content">
-        <div class="event-date">
-            <div class="events">
-            <div class="event-name">
-                Fazl &<br>
-                Nadya
-            </div>
-            </div>
-            <div class="countdown-area">
+  <div class="dark-overlay"></div>
 
-            <h3>WAKTU ACARA</h3>
-            </div>
-            <div class="date-number">
-                <span>12</span>
-                <span>12</span>
-                <span>2027</span>
-            </div>
+  <div class="event-wrapper">
 
-        </div>
-
-        <div class="event-photo">
-            <img src="assets/gallery4.jpeg"
-                alt="Fazl dan Nadya">
-
-        </div>
-
-        <div class="countdown-area">
-            <h3>COUNTDOWN ACARA</h3>
-            <div class="countdown">
-
-                <div class="count-box">
-                    <span id="hours">00</span>
-                    <small>JAM</small>
-                </div>
-
-                <div class="count-box">
-                    <span id="minutes">00</span>
-                    <small>MENIT</small>
-                </div>
-
-                <div class="count-box">
-                    <span id="seconds">00</span>
-                    <small>DETIK</small>
-                </div>
-            </div>
-            <button class="remind-btn">
-                REMIND ME!
-            </button>
-
-        </div>
+    <!-- 1. KIRI: WAKTU ACARA -->
+    <div class="event-box event-left">
+      <h3 class="event-title">WAKTU ACARA</h3>
+      <div class="date-stack">
+        <span>12</span>
+        <span>12</span>
+        <span>2027</span>
+      </div>
     </div>
+
+    <!-- 2. TENGAH: FOTO + TULISAN NAMA PASANGAN -->
+    <div class="event-middle">
+  <div class="photo-container">
+    <h2 class="couple-name">Fazl &amp;<br>Nadya</h2>
+    <img src="assets/gallery4.jpeg" alt="Fazl & Nadya" class="event-img">
+  </div>
+</div>
+
+    <!-- 3. KANAN: COUNTDOWN ACARA -->
+    <div class="event-box event-right">
+      <h3 class="event-title">COUNTDOWN ACARA</h3>
+      <div class="countdown-row">
+        <div class="time-card">
+          <span id="hours">57</span>
+          <small>JAM</small>
+        </div>
+        <span class="colon">:</span>
+        <div class="time-card">
+          <span id="minutes">32</span>
+          <small>MENIT</small>
+        </div>
+        <span class="colon">:</span>
+        <div class="time-card">
+          <span id="seconds">21</span>
+          <small>DETIK</small>
+        </div>
+      </div>
+      <button class="remind-btn">REMIND ME !</button>
+    </div>
+
+  </div>
 </section>
 
 
@@ -288,8 +277,8 @@
             <span class="pin">📍</span>
 
             <div>
-                <small>LOKASI GEDUNG</small>
-                <strong>PERNIKAHAN</strong>
+                <a href="https://www.google.com/maps/place/Sopo+GABEMA/@1.2635352,101.1785192,17z/data=!3m1!4b1!4m6!3m5!1s0x31d37ca0f109d8c3:0xfc9c06eb8255b87f!8m2!3d1.2635298!4d101.1810941!16s%2Fg%2F11cm0d62lz?entry=ttu&g_ep=EgoyMDI2MDkyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank"><small>LOKASI GEDUNG</small>
+                <strong>PERNIKAHAN</strong></a>
             </div>
         </div>
 
@@ -383,82 +372,66 @@
 
 <section class="page wish-page" id="page10">
 
-    <div class="dark-overlay"></div>
 
-    <div class="wish-container">
+  <div class="wish-container">
 
-        <div class="wish-name">
-            Fazl &<br>
-            Nadya
+    <!-- 1. KARTU UCAPAN GLASSMORPHISM (SISI KIRI) -->
+    <div class="wish-glass-card">
+      <h3 class="wish-card-title">KIRIM UCAPAN DI SINI :</h3>
+
+      <form id="wishForm">
+        <div class="wish-input-group">
+          <label>NAMA :</label>
+          <input type="text" id="guestName" required>
         </div>
 
+        <div class="wish-input-group">
+          <label>PESAN/UCAPAN :</label>
+          <textarea id="message" rows="3" required></textarea>
+        </div>
 
-        <form id="wishForm">
+        <div class="wish-btn-container">
+          <button type="submit" class="wish-submit-btn">KIRIM</button>
+        </div>
+      </form>
 
-            <label>
-                NAMA :
-            </label>
-
-            <input
-                type="text"
-                id="guestName"
-                placeholder="Masukkan nama"
-                required>
-
-
-            <label>
-                KIRIM UCAPAN DI SINI :
-            </label>
-
-            <textarea
-                id="message"
-                placeholder="Pesan/Ucapan"
-                required></textarea>
-
-
-            <p class="gift-text">
-
-                JIKA MEMBERI MERUPAKAN UNGKAPAN
-                TANDA KASIH, BAPAK/IBU/SAUDARA/I
-                DAPAT MEMBERI HADIAH SECARA
-                CASHLESS. TERIMA KASIH.
-
-            </p>
-
-
-            <button type="submit">
-                KIRIM
-            </button>
-
-        </form>
-
+      <!-- FOOTER QR CODE & CASHLESS TEXT -->
+      <div class="wish-cashless-footer">
+        <img src="assets/QR code.jpg" alt="QR Code" class="qr-img">
+        <p class="gift-text">
+          JIKA MEMBERI MERUPAKAN UNGKAPAN TANDA KASIH, BAPAK/IBU/SAUDARA/I DAPAT MEMBERI HADIAH SECARA CASHLESS. TERIMA KASIH.
+        </p>
+      </div>
     </div>
 
+    <!-- 2. TULISAN NAMA PASANGAN (POJOK KANAN ATAS - WARNA PUTIH) -->
+    <div class="wish-couple-name">
+      Fazl &amp;<br>
+      Nadya
+    </div>
 
+  </div>
 </section>
 
 
 <section class="page thank-page" id="page11">
     <div class="dark-overlay"></div>
-    <div class="thank-content">
-        <div class="thank-name">
-            Fazl &<br>
+    
+    <div class="thank-container">
+        <!-- 1. TULISAN THANK YOU (POJOK KIRI BAWAH) -->
+        <div class="thank-left">
+            <h1>THANK YOU</h1>
+            <p>
+                WE WOULD LOVE IF YOU COME <br>
+                TO OUR WEDDING :)
+            </p>
+        </div>
+
+        <!-- 2. NAMA PASANGAN (POJOK KANAN ATAS - WARNA PUTIH) -->
+        <div class="thank-right-name">
+            Fazl &amp;<br>
             Nadya
         </div>
-
-        <h1>
-            THANK YOU
-        </h1>
-
-        <p>
-            WE WOULD LOVE IF YOU COME <br>
-            TO OUR WEDDING <3
-        </p>
-
-        <div class="heart">
-            ♥
-        </div>
-
     </div>
 </section>
 
