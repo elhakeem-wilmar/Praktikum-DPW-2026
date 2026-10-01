@@ -3,209 +3,467 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Hadi & Claud - Wedding Invitation</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap"
+    <title>Fazl & Nadya - Wedding Invitation</title>
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Special+Elite&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body >
 
-    <section class="cover" id="cover">
-        <div class="cover-overlay"></div>
-        <div class="cover-content">
-            <div class="cover-photo">
-                <img src="assets/cover.jpeg" alt="Hadi dan Claud">
-            </div>
-            <h1 class="cover-name">
-                Hadi
-                <span>&</span>
-                Claud
-            </h1>
-            <button class="open-button" id="openInvitation">
-                Met Our Wedding
-            </button>
+<audio id="music" loop>
+    <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" id="musicBtn">
+    ♫
+</button>
+
+<section class="page cover-page" id="page1">
+    <div class="dark-overlay"></div>
+    
+    <div class="cover-content">
+        <div class="bottom-ornament">
+            <img src="assets/ornamen2.png" width="780">
         </div>
-    </section>
+        
+        <div class="cover-name">
+            <span>Fazl &</span>
+            <span>Nadya</span>
+        </div>
+        
+        <button class="open-btn" onclick="openInvitation()">
+            OPEN INVITATION
+        </button>
+        
+    </div>
 
-    <main id="mainWebsite" class="main-website">
-        <section class="hero">
-            <div class="hero-background"></div>
-            <div class="hero-content">
-                <div class="date">
-                    <span>30</span>
-                    <span>12</span>
-                    <span>2026</span>
-                </div>
-                <div class="photo photo-claud">
-                    <img src="assets/claud.jpg" alt="Claud">
-                </div>
-                <div class="photo photo-hadi">
-                    <img src="assets/hadi.jpg" alt="Hadi">
-                </div>
+    
+
+</section>
 
 
-                <!-- Nama -->
-                <div class="hero-name">
-                    <span>Hadi</span>
-                    <small>&</small>
-                    <span>Claud</span>
-                </div>
+<section class="page greeting-page" id="page2">
+    <div class="dark-overlay"></div>
+    <div class="top-name">
+        Fazl &<br>
+        Nadya
+    </div>
+
+    <div class="glass-box greeting-box">
+
+        <h2>SALAM HANGAT,</h2>
+
+        <p>
+            DENGAN PENUH RASA SYUKUR DAN SUKACITA,
+            KAMI BERNIAT MEMBAGIKAN MOMEN BAHAGIA INI
+            BERSAMA ANDA. KAMI MENGUNDANG
+            BAPAK/IBU/SAUDARA/I UNTUK MENJADI BAGIAN
+            DARI HARI ISTIMEWA PERNIKAHAN KAMI.
+        </p>
+
+        <p>
+            MERUPAKAN SUATU KEHORMATAN DAN KEBAHAGIAAN
+            BAGI KAMI APABILA BAPAK/IBU/SAUDARA/I
+            BERKENAN HADIR SERTA MEMBERIKAN DOA RESTU
+            BAGI LANGKAH BARU PERJALANAN KAMI.
+        </p>
+
+    </div>
+</section>
 
 
-                <!-- Lokasi -->
-                <div class="location">
+<section class="page profile-page" id="page3">
+    <div class="blur-background"></div>
+    <div class="profile-card">
+        <div class="profile-photo">
+            <img src="assets/fazl.jpeg" alt="Fazl">
+        </div>
 
-                    <div class="location-icon">
-                        📍
-                    </div>
+        <div class="profile-info">
+            <h1>Fazl El Hakeem, S.T</h1>
+            <p>
+                LAHIR : 01 JANUARI 2007
+            </p>
+            <p>
+                PUTRA DARI BAPAK ANDY WEIR
+                &amp; IBU WINDY FLOREN
+            </p>
 
-                    <div class="location-line"></div>
+            <blockquote>
+                “BAGI SAYA, DIA BUKAN HANYA PASANGAN,
+                TAPI JUGA RUMAH TEMPAT SAYA SELALU
+                INGIN PULANG.”
+            </blockquote>
 
-                    <p>Bekasi</p>
+        </div>
+    </div>
+    <div class="ornament top-ornament">
+        <center><img src="assets/ornamen1.png" width="760"></center>
+    </div>
+</section>
 
-                </div>
+
+<section class="page profile-page bride-page" id="page4">
+    <div class="blur-background"></div>
+    <div class="profile-card reverse">
+        <div class="profile-photo-nad">
+            <img src="assets/nadya.jpeg" alt="Nadya">
+        </div>
+
+        <div class="profile-info">
+            
+            <h1>Nadya Sulfa, S.T</h1>
+
+            <p style="text-align: right;">
+                LAHIR : 31 DESEMBER 2007
+            </p>
+
+            <p style="text-align: right;">
+                PUTRI DARI BAPAK ANDER TERZT
+                &amp; IBU DIANA LISEN
+            </p>
+
+            <blockquote class="right">
+                “DIA ADALAH ALASAN SAYA PERCAYA
+                BAHWA DOA-DOA BAIK SELALU MENEMUKAN
+                JALANNYA DI WAKTU YANG TEPAT.”
+            </blockquote>
+
+        </div>
+
+    </div>
+    <div class="ornament top-ornament">
+        <center><img src="assets/ornamen1.png" width="760"></center>
+    </div>
+</section>
 
 
-                <!-- Tombol kalender -->
-                <button class="calendar-button" id="calendarButton">
-                    <span>▣</span>
-                    Simpan Kalender
-                </button>
+<section class="page story-page" id="page5">
+    <div class="dark-overlay"></div>
+    <div class="story-title">
+        <div class="story-name">
+            Fazl &<br>
+            Nadya
+        </div>
+        <div class="story-label">
+            LOVE STORY &lt;3
+        </div>
+    </div>
 
+    <div class="story-container">
+        <div class="story-card card-one">
+            <div class="paperclip">
+                📎︎
+            </div>
+            <img src="assets/gallery1.jpeg"
+                alt="First Met">
+            <div class="story-text">
+                <strong>
+                    FIRST MET (2020)
+                </strong>
+                <span>
+                    KAMI BERTEMU DI KAMPUS
+                   <p> “Pertemuan sederhana yang menjadi awal dari cerita luar biasa.”</p>
+                </span>
+            </div>
+        </div>
+
+        <!-- STORY 2 -->
+        <div class="story-card card-two">
+            <div class="paperclip">
+                📎︎
+            </div>
+            <img src="assets/gallery2.jpeg"
+                alt="The Journey">
+            <div class="story-text">
+                <strong>
+                    THE JOURNEY (2024-2026)
+                </strong>
+                <span>
+                    KAMI BEKERJA DI TEMPAT YANG SAMA
+                    <p>“Dari langkah yang sama, tumbuh rasa yang semakin nyata.”</p>
+                </span>
+            </div>
+        </div>
+
+        <!-- STORY 3 -->
+        <div class="story-card card-three">
+            <div class="paperclip">
+                📎︎
+            </div>
+            <img src="assets/gallery3.jpeg"
+                alt="Beginning of Forever">
+            <div class="story-text">
+                <strong>
+                    THE BEGINNING OF FOREVER (2027)
+                </strong>
+                <span>
+                    KAMI MELANGKAH BERSAMA KE
+                    KEHIDUPAN BARU
+                    <p>“Hari ini bukan akhir dari perjalanan, melainkan awal dari selamanya.”</p>
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="page event-page" id="page6">
+    <div class="dark-overlay"></div>
+    <div class="event-content">
+        <div class="event-date">
+            <div class="events">
+            <div class="event-name">
+                Fazl &<br>
+                Nadya
+            </div>
+            </div>
+            <div class="countdown-area">
+
+            <h3>WAKTU ACARA</h3>
+            </div>
+            <div class="date-number">
+                <span>12</span>
+                <span>12</span>
+                <span>2027</span>
             </div>
 
-        </section>
+        </div>
 
+        <div class="event-photo">
+            <img src="assets/gallery4.jpeg"
+                alt="Fazl dan Nadya">
 
+        </div>
 
-
-        <section class="wedding-section">
-
-            <div class="wedding-background"></div>
-
-            <div class="wedding-content">
-
-                <!-- Tanggal -->
-                <div class="wedding-date">
-
-                    <span>30</span>
-                    <span>12</span>
-                    <span>2026</span>
-
-                </div>
-
-
-                <!-- Foto pasangan -->
-                <div class="couple-wrapper">
-
-                    <div class="couple-photo couple-left">
-                        <img src="assets/claud.jpg" alt="Claud">
-                    </div>
-
-                    <div class="couple-photo couple-right">
-                        <img src="assets/hadi.jpg" alt="Hadi">
-                    </div>
-
-                    <div class="couple-name">
-                        Hadi & Claud
-                    </div>
-
-                </div>
-
-
-                <!-- Lokasi -->
-                <div class="wedding-location">
-
-                    <div class="map-icon">
-                        📍
-                    </div>
-
-                    <div class="dotted-line"></div>
-
-                    <h3>LOKASI</h3>
-
-                    <p>Bekasi</p>
-
-                </div>
-
-
-                <!-- Kalender -->
-                <button class="calendar-button bottom-calendar" id="calendarButton2">
-                    <span>▣</span>
-                    Simpan Kalender
-                </button>
-
-            </div>
-
-        </section>
-
-
-        <section class="countdown-section">
-
-            <h2>Menuju Hari Bahagia</h2>
-
+        <div class="countdown-area">
+            <h3>COUNTDOWN ACARA</h3>
             <div class="countdown">
 
                 <div class="count-box">
-                    <span id="days">0</span>
-                    <small>Hari</small>
+                    <span id="hours">00</span>
+                    <small>JAM</small>
                 </div>
 
                 <div class="count-box">
-                    <span id="hours">0</span>
-                    <small>Jam</small>
+                    <span id="minutes">00</span>
+                    <small>MENIT</small>
                 </div>
 
                 <div class="count-box">
-                    <span id="minutes">0</span>
-                    <small>Menit</small>
+                    <span id="seconds">00</span>
+                    <small>DETIK</small>
                 </div>
+            </div>
+            <button class="remind-btn">
+                REMIND ME!
+            </button>
 
-                <div class="count-box">
-                    <span id="seconds">0</span>
-                    <small>Detik</small>
+        </div>
+    </div>
+</section>
+
+
+<section class="page location-page" id="page7">
+     <div class="location-photo">
+        <img src="assets/gallery7.jpeg" alt="Fazl dan Nadya">
+        <div class="couple-name">
+            Fazl &amp; Nadya
+        </div>
+        <div class="location-button">
+            <span class="pin">📍</span>
+
+            <div>
+                <small>LOKASI GEDUNG</small>
+                <strong>PERNIKAHAN</strong>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="location-map">
+            <div class="map-image">
+                <img src="assets/lokasi.png" alt="Map">
+                <div class="map-pin">
+                    📍
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
 
+
+<section class="page page-gallery" id="page8">
+    <div class="gallery-wrapper">
+    
+        <div class="gallery-item foto1">
+            <img src="assets/gallery1.jpeg" alt="Foto 1">
+        </div>
+
+        <div class="gallery-item foto2">
+            <img src="assets/gallery3.jpeg" alt="Foto 2">
+        </div>
+
+        <div class="gallery-item foto3">
+            <img src="assets/gallery6.jpeg" alt="Foto 3">
+        </div>
+
+        <div class="gallery-item foto4">
+            <img src="assets/gallery2.jpeg" alt="Foto 4">
+        </div>
+
+        <div class="gallery-item foto5">
+            <img src="assets/gallery8.jpeg" alt="Foto 5">
+        </div>
+
+        <div class="gallery-item foto6">
+            <img src="assets/1.jpeg" alt="Foto 6">
+        </div>
+
+        <div class="gallery-item foto7">
+            <img src="assets/gallery7.jpeg" alt="Foto 7">
+        </div>
+
+        <div class="gallery-item foto8">
+            <img src="assets/2.jpeg" alt="Foto 8">
+        </div>
+
+        <div class="gallery-center">
+            <div class="gallery-name">
+                Fazl &<br>
+                Nadya
             </div>
 
-        </section>
+            <div class="gallery-subtitle">
+                WEDDING GALLERY
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="page movie-page" id="page9">
+    <div class="dark-overlay"></div>
+    <div class="movie-content">
+        <div class="movie-title">
+            Fazl & Nadya
+
+            <span>
+                WEDDING MOVIE
+            </span>
+        </div>
+
+        <div class="movie-box">
+            <video controls poster="assets/bg.jpg">
+                <source
+                    src="assets/Movie.mp4"
+                    type="video/mp4">
+
+                Browser Anda tidak mendukung video.
+            </video>
+        </div>
+    </div>
+
+</section>
 
 
-        <!-- ==================================================
-             FOOTER
-        ================================================== -->
+<section class="page wish-page" id="page10">
 
-        <footer>
+    <div class="dark-overlay"></div>
 
-            <p>Hadi & Claud</p>
+    <div class="wish-container">
 
-            <span>30 Desember 2026</span>
-
-        </footer>
-
-    </main>
+        <div class="wish-name">
+            Fazl &<br>
+            Nadya
+        </div>
 
 
-    <!-- Tombol Musik -->
-    <button class="music-button" id="musicButton">
-        ♫
-    </button>
+        <form id="wishForm">
 
-    <audio id="backgroundMusic" loop>
-        <source src="assets/music.mp3" type="audio/mpeg">
-    </audio>
+            <label>
+                NAMA :
+            </label>
+
+            <input
+                type="text"
+                id="guestName"
+                placeholder="Masukkan nama"
+                required>
 
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+            <label>
+                KIRIM UCAPAN DI SINI :
+            </label>
+
+            <textarea
+                id="message"
+                placeholder="Pesan/Ucapan"
+                required></textarea>
+
+
+            <p class="gift-text">
+
+                JIKA MEMBERI MERUPAKAN UNGKAPAN
+                TANDA KASIH, BAPAK/IBU/SAUDARA/I
+                DAPAT MEMBERI HADIAH SECARA
+                CASHLESS. TERIMA KASIH.
+
+            </p>
+
+
+            <button type="submit">
+                KIRIM
+            </button>
+
+        </form>
+
+    </div>
+
+
+</section>
+
+
+<section class="page thank-page" id="page11">
+    <div class="dark-overlay"></div>
+    <div class="thank-content">
+        <div class="thank-name">
+            Fazl &<br>
+            Nadya
+        </div>
+
+        <h1>
+            THANK YOU
+        </h1>
+
+        <p>
+            WE WOULD LOVE IF YOU COME <br>
+            TO OUR WEDDING <3
+        </p>
+
+        <div class="heart">
+            ♥
+        </div>
+
+    </div>
+</section>
+
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
