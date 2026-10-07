@@ -2,7 +2,11 @@
 $data_tamu = [
     1 => "Susilo Bambang Yudhoyono",
     2 => "Joko Widodo",
-    3 => "Prabowo Subianto"
+    3 => "Prabowo Subianto",
+    4 => "NCT Dream", 
+    5 => "BTS",
+    6 => "BABY MONSTER", 
+    7 => "AMBATUKAMBA"
 ];
 
 $id_tamu = isset($_GET['tamu']) ? $_GET['tamu'] : null;
