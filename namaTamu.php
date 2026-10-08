@@ -205,9 +205,9 @@ if ($id_tamu != null && array_key_exists($id_tamu, $data_tamu)) {
         <div class="gallery-item foto3"><img src="assets/gallery6.jpeg" alt="Foto 3"></div>
         <div class="gallery-item foto4"><img src="assets/gallery2.jpeg" alt="Foto 4"></div>
         <div class="gallery-item foto5"><img src="assets/gallery8.jpeg" alt="Foto 5"></div>
-        <div class="gallery-item foto6"><img src="assets/1.jpeg" alt="Foto 6"></div>
+        <div class="gallery-item foto6"><img src="assets/01.jpeg" alt="Foto 6"></div>
         <div class="gallery-item foto7"><img src="assets/gallery7.jpeg" alt="Foto 7"></div>
-        <div class="gallery-item foto8"><img src="assets/2.jpeg" alt="Foto 8"></div>
+        <div class="gallery-item foto8"><img src="assets/gallery4.jpeg" alt="Foto 8"></div>
         <div class="gallery-center">
             <div class="gallery-name">Fazl &<br>Nadya</div>
             <div class="gallery-subtitle">WEDDING GALLERY</div>
@@ -249,7 +249,7 @@ if ($id_tamu != null && array_key_exists($id_tamu, $data_tamu)) {
         </div>
       </form>
       <div class="wish-cashless-footer">
-        <img src="assets/QR code.jpg" alt="QR Code" class="qr-img">
+        <img src="assets/QR code.jpeg" alt="QR Code" class="qr-img">
         <p class="gift-text">
           JIKA MEMBERI MERUPAKAN UNGKAPAN TANDA KASIH, BAPAK/IBU/SAUDARA/I DAPAT MEMBERI HADIAH SECARA CASHLESS. TERIMA KASIH.
         </p>
